@@ -1,6 +1,115 @@
 :root {
   --white: #ffffff;
+  --iris: #4D5AE5;
+  --ordinary-color: #434455;
+  --title-color: #2E2F42;
+  --button-bg: #F4F4FD;
+  --button-bg-hover: #404BBF;
+  --borders: #E7E9FC;  
+
+  --timing-duration: 250ms;
+  --timing-animation: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
+
+/*
+  --company-link: #afb1b8;
+}
+
+
+
+/* Палитра
+текс #434455
+заголовок #2E2F42
+фон #2E2F42
+акцент #4D5AE5
+*/
+
+/* Шрифты
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+/* Modal window *//*
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  visibility: visible;
+  background: rgba(46, 47, 66, 0.4);
+
+          transition: visibility  var(--timing-duration) var(--timing-animation),
+          opacity var(--timing-duration) var(--timing-animation);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  
+}
+
+.modal-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--timing-duration) var(--timing-animation);
+
+  min-width: 408px;
+  min-height: 576px;
+  background-color: #FCFCFC;
+}
+
+.backdrop.is-hidden .modal-window {
+  transform: translate(-50%, -50%)  scale(1.5);
+}
+
+.modal-window-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: #E7E9FC;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: var(--timing-duration);
+  transition-timing-function: var(--timing-animation);
+  
+}
+
+.modal-window-button:active {
+  
+  background-color: #404BBF;
+}
+
+.modal-window-icon {
+      transition-property: fill;
+          transition-duration: var(--timing-duration);
+          transition-timing-function: var(--timing-animation);
+}
+
+.modal-window-icon {
+  fill: #2E2F42;
+
+}
+
+.modal-window-button:active .modal-window-icon {
+  fill: #FFFFFF;
+  ;
+}
+*/
+
+
+
+
 
 /* нет маркеров у списков */
 .list {
@@ -22,7 +131,7 @@ button {
 
 button:hover,
 button:focus {
-  background-color: #4D5AE5;
+  background-color: var(--iris);
 }
 
 h1,
@@ -53,14 +162,14 @@ img {
 
 body {
   font-family: 'Roboto', sans-serif;
-  color: #434455;
-  background-color: #FFFFFF;
+  color: var(--ordinary-color);
+  background-color: var(--white);
 }
 
   /* Header */
 
   .header {
-    border-bottom: 1px solid #e7e9fc;
+    border-bottom: 1px solid var(--borders);
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -90,7 +199,7 @@ body {
 
  .menu-link:hover,
  .menu-link:focus {
-     color: #404BBF;
+     color: var(--button-bg-hover);
  }
 
  .contacts {
@@ -105,13 +214,13 @@ body {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
-  color: #434455;
+  color: var(--ordinary-color);
   padding: 24px 0 24px 0;
  }
 
  .contact-info:hover,
  .contact-info:focus {
-     color: #404BBF
+     color: var(--button-bg-hover);
  }
  
  .contact-nav {
@@ -123,7 +232,7 @@ body {
 }
 
  .logo-studio {
- color: #2E2F42;
+ color: var(--title-color);
  }
 
  .logo-web {
@@ -134,7 +243,7 @@ body {
      align-items: center;
      letter-spacing: 0.03em;
      text-transform: uppercase;
-     color: #4D5AE5;
+     color: var(--iris);
      display: flex; 
      display: inline-block;
      margin-right: 76px;
@@ -148,13 +257,13 @@ body {
  font-size: 16px;
  line-height: 1.5;
  letter-spacing: 0.02em;
- color: #2E2F42;
+ color: var(--title-color);
  }
  
  /* Ad section */
 
 .hero-section {
-  background: #2E2F42;
+  background: var(--title-color);
   padding-top: 188px;
   padding-bottom: 188px;
   max-width: 1440px;
@@ -178,7 +287,7 @@ url('../images/people-office.jpg');
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
-  color: #FFFFFF;
+  color: var(--white);
   margin-bottom: 48px;
   width: 496px;
   margin-left: auto;
@@ -188,7 +297,7 @@ url('../images/people-office.jpg');
 }
 
 .hero-btn {
-  background-color: #4D5AE5;
+  background-color: var(--iris);
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -198,10 +307,10 @@ url('../images/people-office.jpg');
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
+  color: var(--white);
   cursor: pointer;
   list-style: none;
-  border-color: #4D5AE5;
+  border-color: var(--iris);
   border-radius: 4px;
   border: none;
   padding: 16px 32px;
@@ -212,8 +321,8 @@ url('../images/people-office.jpg');
 }
 .hero-btn:hover,
 .hero-btn:focus {
-  background-color: #404BBF;
-  color:#FFFFFF;
+  background-color: var(--button-bg-hover);
+  color: var(--white);
 }
   
 /* Section 1 */
@@ -253,7 +362,7 @@ font-weight: 500;
 font-size: 20px;
 line-height: 1.2;
 letter-spacing: 0.02em;
-color: #2E2F42;
+color: var(--title-color);
 }
 .features-text {
   font-family: 'Roboto', sans-serif;
@@ -262,7 +371,7 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
-color: #434455;
+color: var(--ordinary-color);
 }
 
 .features-item {
@@ -273,7 +382,7 @@ color: #434455;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #F4F4FD;
+  background-color: var(--button-bg);
   height: 112px;
   border-radius: 4px;
   margin-bottom: 8px;
@@ -289,7 +398,7 @@ line-height: 1.11;
 text-align: center;
 letter-spacing: 0.02em;
 text-transform: capitalize;
-color: #2E2F42;
+color: var(--title-color);
 margin-bottom: 72px;
 
 }
@@ -309,7 +418,7 @@ margin-bottom: 72px;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: #2E2F42;
+  color: var(--title-color);
   margin-bottom: 8px;
   margin-top: 0;
 }
@@ -322,7 +431,7 @@ font-size: 16px;
 line-height: 1.5;
 text-align: center;
 letter-spacing: 0.02em;
-color: #434455;
+color: var(--ordinary-color);
 }
 
 .team-section {
@@ -337,7 +446,7 @@ color: #434455;
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.02em;
-  color: #2E2F42;
+  color: var(--title-color);
   text-align: center;
   margin-bottom: 8px;
   margin-top: 0;
@@ -349,7 +458,7 @@ color: #434455;
 }
 
 .team-item  {
-  background-color: #FFFFFF;
+  background-color: var(--white);
   text-align: center;
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
@@ -363,13 +472,13 @@ font-size: 16px;
 line-height: 1.5;
 text-align: center;
 letter-spacing: 0.02em;
-color: #434455;
+color: var(--ordinary-color);
 text-align: center;
 margin-bottom: 8px;
 }
 
 .team-section {
-  background-color: #F4F4FD
+  background-color: var(--button-bg)
 }
 
 .team-list {
@@ -379,7 +488,7 @@ margin-bottom: 8px;
 }
 
 .team-item {
-  background-color: #FFFFFF;
+  background-color: var(--white);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
               0px 1px 1px rgba(46, 47, 66, 0.16),
               0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -403,13 +512,13 @@ margin-bottom: 8px;
 }
 
 .soc-icon {
-  fill: #F4F4FD;;
+  fill: var(--button-bg);
 }
 
 .soc-link {
   width: 100%;
   height: 100%;
-  background: #4D5AE5;;
+  background: var(--iris);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -420,7 +529,7 @@ margin-bottom: 8px;
 
 .soc-link:hover,
 .soc-link:focus {
-  background: #404bbf;
+  background: var(--button-bg-hover);
 }
 
 /* Customers */
@@ -433,7 +542,7 @@ margin-bottom: 8px;
 .customers-title{
   font-size: 36px;
   line-height: 1.1;
-  color: #2E2F42;
+  color: var(--title-color);
   margin-bottom: 72px;
   text-align: center;
 }
@@ -463,8 +572,8 @@ margin-bottom: 8px;
 
 .customers-link:hover,
 .customers-link:focus {
-  border-color: #404bbf;
-  color: #404bbf;
+  border-color: var(--button-bg-hover);
+  color: var(--button-bg-hover);
 }
 
 .logo {
@@ -473,7 +582,7 @@ margin-bottom: 8px;
 
 /* Footer section */
 .footer {
-  background: #2e2f42;
+  background: var(--title-color);
   height: 312px;
   padding: 100px 0;
 }
@@ -494,18 +603,18 @@ margin-bottom: 8px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #E7E9FC;
+  color: var(--borders);
   margin: 0;
   
 }
 
   .logo-studio-footer { 
-  color: #F4F4FD;
+  color: var(--button-bg);
   text-decoration-line: none;
 }
 
 .logo-studio-footer:visited {
-    color: #f4f4fd;
+    color: var(--button-bg);
 }
 
 .logo-footer {
@@ -526,7 +635,7 @@ font-weight: 500;
 font-size: 16px;
 line-height: 24px;
 letter-spacing: 0.02em;
-color: #FFFFFF;
+color:var(--white);
 }
 
 .soc-link-footer:hover,
@@ -538,7 +647,7 @@ color: #FFFFFF;
 
 .container-content {
   padding: 32px 16px;
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--borders);
   border-top: none;
 }
 
@@ -553,7 +662,7 @@ color: #FFFFFF;
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin: 0; 
-  color: #434455;
+  color: var(--ordinary-color);
   }
 
 .portfolio-main {
@@ -566,7 +675,7 @@ color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
   border-radius: 4px;
   padding: 12px 24px;
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--borders);
 
 }
 
@@ -600,7 +709,7 @@ color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
   border-radius: 4px;
   padding: 12px 24px;
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--borders);
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -609,16 +718,16 @@ color: #FFFFFF;
   align-items: center;
   text-align: center;
   letter-spacing: 0.04em;
-  color: #4D5AE5; 
-  background: #F4F4FD;
+  color: var(--iris); 
+  background: var(--button-bg);
   border: 1px solid transparent;
         }
 
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   border: 1px solid transparent;
-  color: #FFFFFF;
-  background: #404BBF;
+  color: var(--white);
+  background: var(--button-bg-hover);
   cursor: pointer;
 }
 
@@ -629,3 +738,25 @@ color: #FFFFFF;
   justify-content: center;
   margin-bottom: 72px;
   }
+
+  /*.parrent {
+    position: relative;
+    overflow: hidden;
+}
+
+*/
+  .overlay {
+    position: absolute;
+    display: inline-block;
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    top: 100%;
+    left: 0;
+    background: var(--iris);
+    width: 100%;
+    height: 100%;
+    transition-property: transform;
+    transition-duration: var(--timing-duration);
+    transition-timing-function: var(--timing-animation);
+}
