@@ -6,8 +6,6 @@
   --button-bg: #F4F4FD;
   --button-bg-hover: #404BBF;
   --borders: #E7E9FC;  
-  --timing-duration: 250ms;
-  --timing-animation: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* нет маркеров у списков */
@@ -94,12 +92,36 @@ body {
 
 .site-nav-link {
   padding: 24px 0 24px 0;
+  position: relative;
 }
+
+.site-nav-link {
+  display: block;
+  color: var(--site-nav-color-item);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-link {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--title-color);
+  transition: color 300ms linear;
+  }
 
  .menu-link:hover,
  .menu-link:focus {
      color: var(--button-bg-hover);
  }
+
+ .menu-portfolio {
+  color: #404BBF;
+}
 
  .contacts {
      font-style: normal;
@@ -128,6 +150,15 @@ body {
   align-items: center;
   padding-top: 24px;  
   padding-bottom: 24px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
+}
+
+.link {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
  .logo-studio {
@@ -149,15 +180,6 @@ body {
     
   }
 
- .menu-link {
- font-family: 'Roboto', sans-serif;
- font-style: normal;
- font-weight: 500;
- font-size: 16px;
- line-height: 1.5;
- letter-spacing: 0.02em;
- color: var(--title-color);
- }
  
  /* Ad section */
 
@@ -423,7 +445,9 @@ margin-bottom: 8px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
- 
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-link:hover,
@@ -526,6 +550,7 @@ margin-bottom: 8px;
 
 .soc-list-footer {
   gap: 16px;
+
 }
 
 .soc-text {
@@ -536,11 +561,18 @@ line-height: 24px;
 letter-spacing: 0.02em;
 color:var(--white);
 }
+.soc-link-footer {
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .soc-link-footer:hover,
 .soc-link-footer:focus {
   background: #31d0aa;
+
 }
+
 
 /* Portfolio Page */
 
@@ -655,8 +687,8 @@ color:var(--white);
     width: 100%;
     height: 100%;
     transition-property: transform;
-    transition-duration: var(--timing-duration);
-    transition-timing-function: var(--timing-animation);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     .card-info {
       font-family: 'Roboto';
