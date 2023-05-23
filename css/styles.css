@@ -239,7 +239,11 @@ url('../images/people-office.jpg');
   margin-left: auto;
   margin-right: auto;
   display: block;
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--button-bg-hover);
@@ -491,6 +495,9 @@ margin-bottom: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover,
@@ -561,6 +568,7 @@ line-height: 24px;
 letter-spacing: 0.02em;
 color:var(--white);
 }
+
 .soc-link-footer {
   transition-property: background;
   transition-duration: 250ms;
@@ -570,7 +578,6 @@ color:var(--white);
 .soc-link-footer:hover,
 .soc-link-footer:focus {
   background: #31d0aa;
-
 }
 
 
