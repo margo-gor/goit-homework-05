@@ -6,110 +6,9 @@
   --button-bg: #F4F4FD;
   --button-bg-hover: #404BBF;
   --borders: #E7E9FC;  
-
   --timing-duration: 250ms;
   --timing-animation: cubic-bezier(0.4, 0, 0.2, 1);
-
 }
-
-/*
-  --company-link: #afb1b8;
-}
-
-
-
-/* Палитра
-текс #434455
-заголовок #2E2F42
-фон #2E2F42
-акцент #4D5AE5
-*/
-
-/* Шрифты
-font-family: 'Raleway', sans-serif;
-font-family: 'Roboto', sans-serif;
-*/
-
-/* Modal window *//*
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  visibility: visible;
-  background: rgba(46, 47, 66, 0.4);
-
-          transition: visibility  var(--timing-duration) var(--timing-animation),
-          opacity var(--timing-duration) var(--timing-animation);
-}
-
-.backdrop.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  
-}
-
-.modal-window {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform var(--timing-duration) var(--timing-animation);
-
-  min-width: 408px;
-  min-height: 576px;
-  background-color: #FCFCFC;
-}
-
-.backdrop.is-hidden .modal-window {
-  transform: translate(-50%, -50%)  scale(1.5);
-}
-
-.modal-window-button {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 24px;
-  height: 24px;
-  background-color: #E7E9FC;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition-property: background-color;
-  transition-duration: var(--timing-duration);
-  transition-timing-function: var(--timing-animation);
-  
-}
-
-.modal-window-button:active {
-  
-  background-color: #404BBF;
-}
-
-.modal-window-icon {
-      transition-property: fill;
-          transition-duration: var(--timing-duration);
-          transition-timing-function: var(--timing-animation);
-}
-
-.modal-window-icon {
-  fill: #2E2F42;
-
-}
-
-.modal-window-button:active .modal-window-icon {
-  fill: #FFFFFF;
-  ;
-}
-*/
-
-
-
-
 
 /* нет маркеров у списков */
 .list {
@@ -739,12 +638,11 @@ color:var(--white);
   margin-bottom: 72px;
   }
 
-  /*.parrent {
+  .parrent {
     position: relative;
     overflow: hidden;
 }
 
-*/
   .overlay {
     position: absolute;
     display: inline-block;
@@ -759,4 +657,14 @@ color:var(--white);
     transition-property: transform;
     transition-duration: var(--timing-duration);
     transition-timing-function: var(--timing-animation);
+
+    .card-info {
+      font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 1.5;
+          color: #F4F4FD;
+     
+  }
 }
