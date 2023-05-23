@@ -493,7 +493,7 @@ margin-bottom: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition-property: background-color;
+  transition-property: border-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -565,12 +565,6 @@ font-size: 16px;
 line-height: 24px;
 letter-spacing: 0.02em;
 color:var(--white);
-}
-
-.soc-link-footer {
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-link-footer:hover,
