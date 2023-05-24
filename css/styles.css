@@ -115,14 +115,8 @@ transition-timing-function: var(--transition-function);
   height: 4px;
   left: 0;
   bottom: -1px;
-  color: var(--button-bg-hover)
+  color: #404BBF;
 }
-
-  .menu-portfolio {
-    color: #404BBF;
-    padding: 24px 0 24px 0;
-    position: relative;
-  }
 
 .menu-link {
   font-family: 'Roboto', sans-serif;
@@ -169,6 +163,7 @@ transition-timing-function: var(--transition-function);
   align-items: center;
   padding-top: 24px;  
   padding-bottom: 24px;
+  transition-property: color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-function);
 }
@@ -669,7 +664,6 @@ color:var(--white);
   border: 1px solid transparent;
   color: var(--white);
   background: var(--button-bg-hover);
-  cursor: pointer;
 }
 
 .portfolio-btn-list {
