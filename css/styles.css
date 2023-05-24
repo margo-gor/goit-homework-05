@@ -6,6 +6,8 @@
   --button-bg: #F4F4FD;
   --button-bg-hover: #404BBF;
   --borders: #E7E9FC;  
+  --transition-duration: 250ms;
+  --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* нет маркеров у списков */
@@ -99,8 +101,8 @@ body {
   display: block;
   color: var(--site-nav-color-item);
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
 }
 
 .menu-link {
@@ -150,14 +152,14 @@ body {
   align-items: center;
   padding-top: 24px;  
   padding-bottom: 24px;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
 }
 
 .link {
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
 
 }
 
@@ -240,8 +242,8 @@ url('../images/people-office.jpg');
   margin-right: auto;
   display: block;
   transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
 }
 
 .hero-btn:hover,
@@ -450,8 +452,8 @@ margin-bottom: 8px;
   justify-content: center;
   cursor: pointer;
   transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
 }
 
 .soc-link:hover,
@@ -494,8 +496,8 @@ margin-bottom: 8px;
   align-items: center;
   justify-content: center;
   transition-property: border-color, color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-function);
 }
 
 .customers-link:hover,
@@ -685,15 +687,86 @@ color:var(--white);
     width: 100%;
     height: 100%;
     transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-function);
   }
-  
+
   .card-info {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-    color: #F4F4FD;
+    color: var(--button-bg);
   } 
+
+  /* Backdrop */
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(46, 47, 66, 0.4);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity, visibility; 
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-function);
+  }
+
+  .modal {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 408px;
+    min-height: 576px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background: rgba(252, 252, 252, 1);
+    transition: transform;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-function);
+    }
+    
+  .modal-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background-color: var(--borders);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color, border;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-function);
+   
+    }
+
+    .modal-close-btn:hover,
+    .modal-close-btn:focus {
+      background-color: var(--button-bg-hover);
+      border: none;
+      fill: var(--white);
+    }
+
+    .modal-close-icon {
+      transition: fill;
+      transition-duration: var(--transition-duration); 
+      transition-timing-function: var(--transition-function);
+    } 
+
+  .is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
