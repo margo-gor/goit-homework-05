@@ -109,18 +109,19 @@ transition-timing-function: var(--transition-function);
 .menu-portfolio::after {
   position: absolute;
   content: '';
-
   display: block;
-  width: 100%;
-  height: 4px;
   background-color: #404BBF;
   border-radius: 2px;
+  width: 100%;
+  height: 4px;
   left: 0;
   bottom: -1px;
 }
 
   .menu-portfolio {
     color: #404BBF;
+    padding: 24px 0 24px 0;
+    position: relative;
   }
 
 .menu-link {
