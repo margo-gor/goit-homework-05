@@ -92,20 +92,7 @@ body {
   padding-bottom: 24px;
 }
 
-.nav-link {
-padding: 24px 0 24px 0;
-position: relative;
-transition-property: color;
-transition-duration: var(--transition-duration);
-transition-timing-function: var(--transition-function);
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--button-bg-hover);
-}
-
-.actual-link::after {
+.actual::after {
   position: absolute;
   content: '';
   display: block;
@@ -115,7 +102,6 @@ transition-timing-function: var(--transition-function);
   height: 4px;
   left: 0;
   bottom: -1px;
-  color: #404BBF;
 }
 
 .actual-link {
@@ -131,16 +117,19 @@ transition-timing-function: var(--transition-function);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--title-color); 
+  color: var(--title-color);
+  padding-top: 24px;
+  padding-bottom: 24px;
   transition-property: color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-function);
-  }
+}
 
  .menu-link:hover,
  .menu-link:focus {
-color: var(--button-bg-hover);
+color: var(--button-bg-hover)
  }
+
 
  .contacts {
      font-style: normal;
