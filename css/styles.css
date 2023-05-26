@@ -87,6 +87,7 @@ body {
   display: flex;
   align-items: center;
 }
+
 .menu-item {
   padding-top: 24px; 
   padding-bottom: 24px;
