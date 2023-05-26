@@ -104,12 +104,6 @@ body {
   bottom: -1px;
 }
 
-.actual-link {
-  padding: 24px 0 24px 0;
-  position: relative;
-  color: #404bbf;
-}
-
 .menu-link {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -117,12 +111,18 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--button-bg-hover);
+  color: var(--title-color);
   padding-top: 24px;
   padding-bottom: 24px;
   transition-property: color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-function);
+}
+
+.actual-link {
+  padding: 24px 0 24px 0;
+  position: relative;
+  color: #404bbf;
 }
 
  .menu-link:hover,
@@ -359,6 +359,12 @@ line-height: 1.5;
 text-align: center;
 letter-spacing: 0.02em;
 color: var(--ordinary-color);
+}
+
+.portfolio-main {
+  padding-top: 96px;
+  padding-bottom: 120px;
+
 }
 
 .team-section {
